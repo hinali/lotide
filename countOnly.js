@@ -10,16 +10,16 @@ const assertEqual = function(actual, expected) {
 
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
-  for (let item of allItems){
-    if(itemsToCount[item]){
-    if(results[item]){
-      results[item] += 1;
-    } else{
-      results[item] = 1;
+  for (let item of allItems) {
+    if (itemsToCount[item]) {
+      if (results[item]) {
+        results[item] += 1;
+      } else {
+        results[item] = 1;
+      }
     }
   }
-}
-return results;
+  return results;
 };
 
 const firstNames = [
