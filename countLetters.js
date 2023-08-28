@@ -20,8 +20,6 @@ const countLetters = function(arr) {
       result[item] = 1;
     }
   }
-
-  console.log(result);
   return result;
 };
 
