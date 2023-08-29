@@ -1,12 +1,4 @@
-const assertEqual = function(actual, expected) {
-
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-
-};
+const assertEqual = require("./assertEqual");
 
 const countLetters = function(arr) {
   let result = {};
@@ -38,3 +30,5 @@ const expectedResult = {
 
 const result1 = countLetters("lighthouse in the house");
 assertEqual(JSON.stringify(result1), JSON.stringify(expectedResult));
+
+module.exports = countLetters;
